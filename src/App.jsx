@@ -9,7 +9,6 @@ const App = () => {
     { icon: Instagram, title: 'Instagram', href: 'https://www.instagram.com/milkadesigns_/' },
     { icon: Globe, title: 'Web Oficial', href: 'https://milkadesigns.mitiendanube.com/?exit_preview_theme_installation' },
     { icon: MessageSquare, title: 'WhatsApp', href: 'https://wa.me/+5492996281095?text=Hola,%20quisiera%20saber%20más%20sobre%20el%20próximo%20evento.' },
-    { icon: Facebook, title: 'Facebook', href: 'https://www.facebook.com/tupagina' },
   ];
 
   return (
