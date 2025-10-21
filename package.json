@@ -1,0 +1,15 @@
+{
+  "name": "create-app-milka",
+  "description": "App para mostrar joyas.",
+  "version": "0.0.0",
+  "author": "JRproyects <rj45redd@gmail.com>",
+  "bin": "src/cli.js",
+  "files": [
+    "src",
+    "templates"
+  ],
+  "dependencies": {
+    "create-create-app": "^7.3.0"
+  },
+  "license": "MIT"
+}
