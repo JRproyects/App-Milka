@@ -22,14 +22,20 @@ const EventPopup = () => {
   const [showEvent, setShowEvent] = useState(false);
 
   useEffect(() => {
-    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQxJBR9fmkOIgih8HmJbLWXjfRgHkZBbxCCjgmupBxFp67Gd066B8i-FLdoAW8u-RooBjPK-sQmpcOV/pub?output=csv'; // reemplaza con tu CSV publicado
+    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQxJBR9fmkOIgih8HmJbLWXjfRgHkZBbxCCjgmupBxFp67Gd066B8i-FLdoAW8u-RooBjPK-sQmpcOV/pub?output=csv';
+    
     Papa.parse(url, {
       download: true,
       header: true,
       complete: (results) => {
         const today = new Date();
         const events = results.data
-          .map(e => ({ date: parseSpanishDate(e.Fecha), location: e.Lugar }))
+          .map(e => ({
+            date: parseSpanishDate(e.Fecha),
+            hour: e.Hora,
+            location: e.Lugar,
+            city: e.Ciudad
+          }))
           .filter(e => e.date && e.date >= today)
           .sort((a, b) => a.date - b.date);
 
@@ -61,8 +67,12 @@ const EventPopup = () => {
           <p className="text-lg font-extrabold mb-2">
             {nextEvent.date.toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
+          <p className="font-bold text-sm">⏰ HORA:</p>
+          <p className="text-base mb-2">{nextEvent.hour}</p>
           <p className="font-bold text-sm">📍 LUGAR:</p>
           <p className="text-base">{nextEvent.location}</p>
+          <p className="font-bold text-sm">🏙️ CIUDAD:</p>
+          <p className="text-base">{nextEvent.city}</p>
         </div>
       )}
     </div>
