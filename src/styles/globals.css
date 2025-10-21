@@ -1,0 +1,33 @@
+/* Importar fuentes primero */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Luego las directivas de Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos propios */
+body {
+  @apply font-inter m-0 p-0 bg-cremaClaro text-bordo dark:bg-darkBg dark:text-darkText;
+}
+
+/* Animaciones */
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.animate-logoEntrance {
+  animation: logoEntrance 0.6s ease-out forwards;
+}
+
+/* Neumorphism shadow */
+.shadow-neumorphism {
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.2),
+              -6px -6px 12px rgba(255,255,255,0.7);
+}
+
+/* Glow suave al hover */
+.hover\:shadow-glow:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 
+              0 0 15px rgba(0,0,0,0.2) inset;
+}

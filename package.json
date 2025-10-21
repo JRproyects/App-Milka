@@ -1,15 +1,23 @@
 {
-  "name": "create-app-milka",
-  "description": "App para mostrar joyas.",
-  "version": "0.0.0",
-  "author": "JRproyects <rj45redd@gmail.com>",
-  "bin": "src/cli.js",
-  "files": [
-    "src",
-    "templates"
-  ],
-  "dependencies": {
-    "create-create-app": "^7.3.0"
+  "name": "app-milka",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "license": "MIT"
+  "dependencies": {
+    "lucide-react": "^0.263.0",
+    "papaparse": "^5.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
+    "vite": "^5.0.0"
+  }
 }
