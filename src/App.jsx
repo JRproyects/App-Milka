@@ -8,7 +8,7 @@ const App = () => {
   const links = [
     { icon: Instagram, title: 'Instagram', href: 'https://www.instagram.com/milkadesigns_/' },
     { icon: Globe, title: 'Web Oficial', href: 'https://milkadesigns.mitiendanube.com/?exit_preview_theme_installation' },
-    { icon: MessageSquare, title: 'WhatsApp', href: 'https://wa.me/+5492996281095?text=Hola,%20quisiera%20saber%20más%20sobre%20el%20próximo%20evento.' },
+    { icon: MessageSquare, title: 'WhatsApp', href: 'https://wa.me/+5492996281095?text=Hola!%20Tengo%20interés%20en%20la%20joyería%20de%20Milka%20Designs.%20Me%20gustaría%20conocer%20más%20detalles%20sobre%20los%20productos%20y%20el%20proceso%20de%20compra.%20Muchas%20gracias!.' },
   ];
 
   return (
