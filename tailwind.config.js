@@ -6,6 +6,9 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      inter: ['Inter', 'sans-serif'],
+    },
     extend: {
       colors: {
         bordo: '#2f0707',
@@ -23,9 +26,6 @@ export default {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
-    },
-    fontFamily: {
-      inter: ['Inter', 'sans-serif'],
     },
   },
   plugins: [],
